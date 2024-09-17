@@ -1,0 +1,162 @@
+html {
+    font-family: $primary-font;
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+        display: none;
+        width: 0;
+        opacity: 0;
+    }
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    outline: none;
+
+    svg path {
+        transition: .3s ease-in-out;
+    }
+
+    &:hover {
+        color: $orange-color;
+
+        svg path {
+            fill: $orange-color;
+        }
+    }
+
+    // &:focus {
+        
+    // }
+
+    &:active {
+        color: $active-color;
+    }
+}
+
+input, textarea {
+    outline: none;
+    border: 1px solid transparent;
+    transition: .2s ease-in-out;
+
+    &::placeholder {
+        transition: .2s ease-in-out;
+    }
+
+    &:hover {
+        &::placeholder {
+            color: $orange-color;
+        }
+    }
+
+    &:focus {
+        border-color: $orange-color;
+    }
+
+    &:active {
+        color: $white-color;
+    }
+}
+
+.section {
+    margin-bottom: 68px;
+
+    &__title {
+        font-family: $secondary-font;
+        margin-top: 0;
+        margin-bottom: 12px;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 31px;
+        color: $black-color;
+
+        &__white {
+            color: $white-color;
+        }
+    }
+}
+
+h1 {
+    position: absolute;
+    z-index: -99;
+    visibility: hidden;
+    opacity: 0;
+}
+
+h2, p, blockquote {
+    margin: 0;
+}
+
+.button {
+    display: block;
+    max-width: 126px;
+    width: 100%;
+    padding: 13px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $white-color;
+    text-align: center;
+    border: 3px solid transparent;
+    background-color: $orange-color;
+    outline: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        background-color: $dark-orange;
+        color: $white-color;
+    }
+
+    &:focus {
+        border-color: $active-color;
+    }
+
+    &:active {
+        background-color: $active-color;
+        color: $white-color;
+    }
+
+    &__transp {
+        border-color: $orange-color;
+        background-color: transparent;
+
+        &:hover {
+            background-color: $orange-color;
+        }
+
+        &:focus {
+            background-color: $dark-orange;
+        }
+
+        &:active {
+            background-color: $active-color;
+            border-color: $active-color;
+        }
+    }
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
